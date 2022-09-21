@@ -1,0 +1,45 @@
+<mvc:View
+    controllerName="EmployeeSkillApp.employeeskill.controller.Object"
+    xmlns="sap.m"
+    xmlns:uxap="sap.uxap"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:semantic="sap.f.semantic"
+    busyIndicatorDelay="0"
+    >
+    <semantic:SemanticPage
+        id="page"
+        headerPinnable="false"
+        toggleHeaderOnTitleClick="false"
+        busy="{objectView>/busy}"
+        busyIndicatorDelay="{objectView>/delay}"
+        showNavButton="true">
+
+        <semantic:titleHeading>
+            <Title
+                text="{Empid}"
+                level="H2"/>
+        </semantic:titleHeading>
+
+        <semantic:headerContent>
+            <Panel
+                id="employeePanel"
+                width="auto"
+                class="sapUiResponsive Margin sapUiNoContentPadding">
+                <headerToolbar>
+                    <Toolbar>
+                        <Title text="Employee ID: {id}" level="H2"/>
+                        <ToolbarSpacer/>
+                        <Link text="Flip For Details" tooltip=""/>
+                    </Toolbar>
+                </headerToolbar>
+            </Panel>
+        </semantic:headerContent>
+
+        <semantic:sendEmailAction>
+            <semantic:SendEmailAction id="shareEmail" press=".onShareEmailPress"/>
+        </semantic:sendEmailAction>
+
+    </semantic:SemanticPage>
+
+</mvc:View>
