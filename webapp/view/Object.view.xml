@@ -16,9 +16,11 @@
         showNavButton="true">
 
         <semantic:titleHeading>
-            <Title
-                text="{Empid}"
-                level="H2"/>
+            <Toolbar>
+				<Button type="Back" press="onNavBack" />
+				<ToolbarSpacer/>
+				<Title text="{i18n>worklistTitle}" level="H2"/>
+			</Toolbar>
         </semantic:titleHeading>
 
         <semantic:headerContent>
@@ -28,17 +30,30 @@
                 class="sapUiResponsive Margin sapUiNoContentPadding">
                 <headerToolbar>
                     <Toolbar>
-                        <Title text="Employee ID: {id}" level="H2"/>
+                        <Title text="Employee ID: {Empid}" level="H2"/>
                         <ToolbarSpacer/>
                         <Link text="Flip For Details" tooltip=""/>
                     </Toolbar>
                 </headerToolbar>
+                <content>
+                    <f:SimpleForm
+                        minWdith="1024"
+                        editable="false"
+                        layout="ResponsiveGridLayout"
+                        labelSpanL="3" lableSpanM="3" emptySpanL="4" emptySpanM="4"
+                        columnsL="1" columnsM="1">
+                        <f:content>
+                            <Label text="First Name"/>
+                            <Text text="{FirstName}"/>
+                            <Label text="Last Name"/>
+                            <Text text="{LastName}"/>
+                            <Label text="Title"/>
+                            <Text text="{Title}"/>
+                        </f:content>
+                    </f:SimpleForm>
+                </content>
             </Panel>
         </semantic:headerContent>
-
-        <semantic:sendEmailAction>
-            <semantic:SendEmailAction id="shareEmail" press=".onShareEmailPress"/>
-        </semantic:sendEmailAction>
 
     </semantic:SemanticPage>
 
