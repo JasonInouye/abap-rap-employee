@@ -108,6 +108,11 @@
           ]
         }, 
         {
+          "pattern": "newEmployee",
+          "name": "newEmployee",
+          "target": "newEmployee"
+        },
+        {
           "pattern": "Employees/{employeeId}/Details",
           "name": "employeeDetails",
           "target": "employeeDetails"
@@ -126,10 +131,15 @@
           "viewLevel": 2,
           "title": "{i18n>objectViewTitle}"
         },
+        "newEmployee": {
+          "viewName": "NewEmployee",
+          "viewId": "newEmployee",
+          "viewLevel": 3
+        },
         "employeeDetails": {
           "viewName": "Details",
           "viewId": "details",
-          "viewLevel": 3,
+          "viewLevel": 4,
           "title": "{i18n>objectViewTitle}",
           "transition": "flip"
         },

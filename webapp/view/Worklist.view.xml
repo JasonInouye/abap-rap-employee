@@ -82,6 +82,10 @@
             </Table>
         </semantic:content>
 
+        <semantic:titleCustomTextActions>
+			<Button text="Add Employee" press=".onAddEmployee"/>
+		</semantic:titleCustomTextActions>
+
     </semantic:SemanticPage>
 
 </mvc:View>

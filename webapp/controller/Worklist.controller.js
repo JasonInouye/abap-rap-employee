@@ -104,6 +104,12 @@ sap.ui.define([
 
         },
 
+        onAddEmployee: function(oEvent) {
+            //alert ("Hello This add button works")
+            console.log("Button Clicked")
+            this.getRouter().navTo("newEmployee")
+        },
+
         /**
          * Event handler for refresh event. Keeps filter, sort
          * and group settings and refreshes the list binding.
