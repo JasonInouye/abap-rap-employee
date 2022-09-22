@@ -106,7 +106,12 @@
           "target": [
             "object"
           ]
-        }
+        }, 
+        {
+          "pattern": "Employees/{employeeId}/Details",
+          "name": "employeeDetails",
+          "target": "employeeDetails"
+        }        
       ],
       "targets": {
         "worklist": {
@@ -120,6 +125,13 @@
           "viewId": "object",
           "viewLevel": 2,
           "title": "{i18n>objectViewTitle}"
+        },
+        "employeeDetails": {
+          "viewName": "Details",
+          "viewId": "details",
+          "viewLevel": 3,
+          "title": "{i18n>objectViewTitle}",
+          "transition": "flip"
         },
         "objectNotFound": {
           "viewName": "ObjectNotFound",

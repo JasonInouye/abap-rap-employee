@@ -49,6 +49,13 @@ sap.ui.define([
                 this.getRouter().navTo("worklist", {}, true);
             }
         },
+        onShowDetails : function (oEvent) {
+			var oCtx = this.getView().getElementBinding().getBoundContext();
+
+			this.getRouter().navTo("employeeDetails", {
+				employeeId : oCtx.getProperty("Empid")
+			});
+		},
 
         /* =========================================================== */
         /* internal methods                                            */

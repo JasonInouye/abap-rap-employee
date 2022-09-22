@@ -32,7 +32,7 @@
                     <Toolbar>
                         <Title text="Employee ID: {Empid}" level="H2"/>
                         <ToolbarSpacer/>
-                        <Link text="Flip For Details" tooltip=""/>
+                        <Link text="{i18n>FlipToResume}" tooltip="{i18n>FlipToResume.tooltip}" press=".onShowDetails"/>
                     </Toolbar>
                 </headerToolbar>
                 <content>
