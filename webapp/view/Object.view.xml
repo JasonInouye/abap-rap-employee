@@ -17,7 +17,7 @@
 
         <semantic:titleHeading>
             <Toolbar>
-				<Button type="Back" press="onNavBack" />
+				<Button type="Back" press=".onNavBack" />
 				<ToolbarSpacer/>
 				<Title text="{i18n>worklistTitle}" level="H2"/>
 			</Toolbar>
@@ -49,6 +49,34 @@
                             <Text text="{LastName}"/>
                             <Label text="Title"/>
                             <Text text="{Title}"/>
+                            <Table                
+                            items="{path: 'to_EmpSkills',
+                                    parameters: {
+                                        expand: 'to_Skills'
+                                    }
+                            }">
+
+                                <columns>
+                                    <Column id="skillcolumn">
+                                        <Text text="Skill" id="skillcolumnname"/>
+                                    </Column>
+                                    <Column id="ratingcolumn">
+                                        <Text text="Rating" id="ratingcolumnname"/>
+                                    </Column>
+                                </columns>
+                                <items>
+                                    <ColumnListItem>
+                                        <cells>
+                                            <ObjectIdentifier
+                                                title="{to_Skills/SkillName}"/>
+
+                                            <ObjectIdentifier
+                                                title="{Rating}"/>
+
+                                        </cells>
+                                    </ColumnListItem>
+                                </items>
+                            </Table>
                         </f:content>
                     </f:SimpleForm>
                 </content>
